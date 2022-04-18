@@ -1,6 +1,6 @@
 Name:           openssl-s_client-enddate-days-json
 Summary:        Extracts HTTPS SSL certs enddate and formats as JSON
-Version:        0.01
+Version:        0.02
 Release:        1%{?dist}
 License:        MIT
 Group:          System Environment/Daemons
