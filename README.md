@@ -7,6 +7,8 @@ I use this script to monitor my HTTPS sites with Node-Red to send me notificatio
 {
    "enddate" : "2023-05-13T09:26:00Z",
    "enddate_epoch" : "1683969960",
-   "days" : 390.282465277778
+   "port" : "443",
+   "days" : 390.254502314815,
+   "host" : "www.cliftonva.org"
 }
 ```
