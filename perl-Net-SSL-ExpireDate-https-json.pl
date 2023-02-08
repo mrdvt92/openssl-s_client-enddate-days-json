@@ -9,7 +9,14 @@ use DateTime::Format::ISO8601::Format;
 my $opt       = {};
 getopts("p:", $opt);
 my $port      = $opt->{"p"} || '443';
-my $host      = shift or die("Syntax: $0 [-p port] hostname\n");
+
+unless (@ARGV) {
+  require File::Basename;
+  my $basename = File::Basename::basename($0);
+  die("Syntax: $basename [-p port] hostname\n");
+}
+
+my $host      = shift;
 my $ed        = Net::SSL::ExpireDate->new( https => "$host:$port" );
 my $dt        = $ed->expire_date;
 
@@ -27,3 +34,11 @@ my $data      = {
                 };
 
 print encode_json($data), "\n";
+
+__END__
+
+=head1 NAME
+
+perl-Net-SSL-ExpireDate-https-json.pl - Obtain web site SSL certificate expiration date and return in JSON payload
+
+=cut
