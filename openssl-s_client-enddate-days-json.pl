@@ -14,6 +14,10 @@ my $host       = shift or die("Syntax: $0 hostname\n");
 my $formatter  = DateTime::Format::ISO8601::Format->new;
 
 my $epoch      = qx{/usr/bin/openssl s_client -servername $host -connect $host:$port </dev/null 2>/dev/null | /usr/bin/openssl x509 -noout -enddate | /usr/bin/awk -F '=' '{print \$NF}' | /usr/bin/xargs -0 /usr/bin/date +"%s" -u -d};
+
+my $error      = $?;
+die("Error: openssl call returns error\n") if $error;
+
 chomp $epoch;
 
 my $days       = ($epoch - time) / 60 / 60 / 24;
