@@ -16,5 +16,5 @@ I use this script to monitor my HTTPS sites with Node-Red to send me notificatio
 
 ## See Also
 
-[bartbutenaers/node-red-contrib-certificate-grabber](https://github.com/bartbutenaers/node-red-contrib-certificate-grabber) - A Node-RED node to capture certificates from TLS/SSL connections
-
+  - [bartbutenaers/node-red-contrib-certificate-grabber](https://github.com/bartbutenaers/node-red-contrib-certificate-grabber) - A Node-RED node to capture certificates from TLS/SSL connections
+  - [hirose31/Net-SSL-ExpireDate](https://github.com/hirose31/Net-SSL-ExpireDate) - A Perl libraery to obtain expiration date of certificates from TLS/SSL connections
